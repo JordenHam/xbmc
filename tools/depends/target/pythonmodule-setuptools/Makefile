@@ -19,7 +19,7 @@ ifeq ($(OS),osx)
 CROSSFLAGS=PYTHONXCPREFIX="$(PREFIX)" CC="$(CC)" LDSHARED="$(CC) -shared" LDFLAGS="$(LDFLAGS) -lpython" PYTHONPATH="$(PREFIX)/lib/python3.6/site-packages/"
 endif
 ifeq ($(OS),ios)
-PYTHON_O=$(abs_top_srcdir)/target/python36/$(PLATFORM)/Modules/python.o
+PYTHON_O=$(abs_top_srcdir)/target/python36/$(PLATFORM)/Programs/python.o
 CROSSFLAGS=PYTHONXCPREFIX="$(PREFIX)" CC="$(CC) $(CFLAGS)" CCSHARED="$(CC) $(CFLAGS) $(PYTHON_O)" LDFLAGS="$(LDFLAGS)" PYTHONPATH="$(PREFIX)/lib/python3.6/site-packages/"
 endif
 
